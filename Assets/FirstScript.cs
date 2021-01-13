@@ -7,34 +7,37 @@ public class FirstScript : MonoBehaviour
     
     void Start()
     {
-        //GetLog1To10();
-        //GetNumber(3, 22);
-        Debug.Log(GetSum(1, 10));
+        Debug.Log(Getmean(1, 10));
+        Debug.Log(Getme(2, 20));
     }
 
-    int GetSum (int n, int m)
+    //平均を出す
+    float Getmean(int n, int m)
     {
-        int sum = 0;
-        for (int i = n; i < m + 1; i++)
+        float mean = 0f;
+        for (int i = 0; i < m + 1; i++)
         {
-            sum = sum + i;
+            mean += i;
         }
-        return sum;
+
+        return mean/(m-n+1);
     }
 
-    void GetNumber(int n, int m)
+    //こっちでもOK
+    float Getme(int n, int m)
     {
-        for (int i = n; i < m + 1; i++)
+        float mean = 0f;
+        float sum = 0;
+        int count = 0;
+
+        for (int i = 0; i < m + 1; i++)
         {
-            Debug.Log(i);
+            sum += i;
+            count++;
         }
+
+        mean = sum / count;
+        return mean;
     }
 
-    void GetLog1To10()
-    {
-        for (int i = 0; i < 11; i++)
-        {
-            Debug.Log(i);
-        }
-    }
 }
