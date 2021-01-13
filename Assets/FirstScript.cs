@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    //関数（メソッド）：処理をまとめた便利道具
-
+    
     void Start()
     {
-        string name1 = SampleNameFunction("atsu");
-        string name2 = SampleNameFunction("yamada");
-        Debug.Log(name1);
-        Debug.Log(name2);
-
-
-        Debug.Log(SampleAddfunction(10, 2));
+        //GetLog1To10();
+        //GetNumber(3, 22);
+        Debug.Log(GetSum(1, 10));
     }
 
-    string SampleNameFunction(string sampleName)
+    int GetSum (int n, int m)
     {
-        Debug.Log(sampleName);
-        return sampleName + "さん";
+        int sum = 0;
+        for (int i = n; i < m + 1; i++)
+        {
+            sum = sum + i;
+        }
+        return sum;
     }
 
-    //四則演算
-    int SampleAddfunction(int a, int b)
+    void GetNumber(int n, int m)
     {
-        return a + b;
+        for (int i = n; i < m + 1; i++)
+        {
+            Debug.Log(i);
+        }
+    }
+
+    void GetLog1To10()
+    {
+        for (int i = 0; i < 11; i++)
+        {
+            Debug.Log(i);
+        }
     }
 }
