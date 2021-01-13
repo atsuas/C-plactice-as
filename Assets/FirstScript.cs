@@ -16,13 +16,36 @@ public class FirstScript : MonoBehaviour
     bool flag2 = false;
 
 
+    //演算　+,-,*,/,%,+=,++,--,&&,||,!
+
     void Start()
     {
-        Debug.Log(Name);
-        Debug.Log(hp);
-        Debug.Log(speed);
-        Debug.Log(flag1);
-        Debug.Log(flag2);
+        int a = 10;
+        int b = 2;
+        Debug.Log(a + b);
+        Debug.Log(a - b);
+        Debug.Log(a * b);
+        Debug.Log(a / b);
+        Debug.Log(b / a);
+
+        float c = 10.0f;
+        float d = 2.0f;
+        Debug.Log(d / c);
+
+        int n = 10;
+        int m = 3;
+        Debug.Log(n / m);
+        Debug.Log(n % m);
+        Debug.Log(10 % 2);
+        Debug.Log(9 % 2);
+
+        int x = 10;
+        x += 1;     // x = x + 1
+        x++;        // x = x + 1
+
+
+
+
     }
 
     void Update()
