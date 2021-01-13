@@ -4,40 +4,54 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    
+    int[] numberList1 = new int[3] { 2, -4, 10 };
+    int[] numberList2 = new int[4] { 2, -4, 10, 100 };
+
     void Start()
     {
-        Debug.Log(Getmean(1, 10));
-        Debug.Log(Getme(2, 20));
+        Debug.Log(GetMaxValue(numberList1));
+        Debug.Log(GetMaxValue(numberList2));
     }
 
-    //平均を出す
-    float Getmean(int n, int m)
+    //　↓ここでGetMaxValueを作ってしまうとラクにできる
+    int GetMaxValue(int[] numberList)
     {
-        float mean = 0f;
-        for (int i = 0; i < m + 1; i++)
+        int maxValue = numberList[0];
+        for (int i = 0; i < numberList.Length; i++)
         {
-            mean += i;
+            if (maxValue < numberList[i])
+            {
+                maxValue = numberList[i];
+            }
         }
-
-        return mean/(m-n+1);
+        return maxValue;
     }
+    //　↑ここまで
 
-    //こっちでもOK
-    float Getme(int n, int m)
+    // ↓１つずつ求める場合
+    int GetMaxValue1()
     {
-        float mean = 0f;
-        float sum = 0;
-        int count = 0;
-
-        for (int i = 0; i < m + 1; i++)
+        int maxValue = numberList1[0];
+        for (int i = 0; i < numberList1.Length; i++)
         {
-            sum += i;
-            count++;
+            if (maxValue < numberList1[i])
+            {
+                maxValue = numberList1[i];
+            }
         }
-
-        mean = sum / count;
-        return mean;
+        return maxValue;
     }
 
+    int GetMaxValue2()
+    {
+        int maxvalue2 = numberList2[0];
+        for (int i = 0; i < numberList2.Length; i++)
+        {
+            if (maxvalue2 < numberList2[i])
+            {
+                maxvalue2 = numberList2[i];
+            }
+        }
+        return maxvalue2;
+    }
 }
