@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    //変数と定数
-    //変数：値を変えられるもの
-    //変数の型　変数名;
+    //変数の型
+    //文字列型:
+    string Name = "中野";
+    //整数：
+    int hp = 100;
+    //浮動小数点数:
+    float speed = 3.11f;
+    //論理値：
+    bool flag1 = true;
+    bool flag2 = false;
+
+
     void Start()
     {
-        string say = "Hello world";
-        Debug.Log(say);
-
-        const string saycon = "Hello world2";
-        Debug.Log(saycon);
+        Debug.Log(Name);
+        Debug.Log(hp);
+        Debug.Log(speed);
+        Debug.Log(flag1);
+        Debug.Log(flag2);
     }
 
     void Update()
