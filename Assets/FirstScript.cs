@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //変数と定数
+    //変数：値を変えられるもの
+    //変数の型　変数名;
     void Start()
     {
-        Debug.Log("Hello world");
+        string say = "Hello world";
+        Debug.Log(say);
+
+        const string saycon = "Hello world2";
+        Debug.Log(saycon);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
