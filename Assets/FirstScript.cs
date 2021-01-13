@@ -4,48 +4,52 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    //変数の型
-    //文字列型:
-    string Name = "中野";
-    //整数：
-    int hp = 100;
-    //浮動小数点数:
-    float speed = 3.11f;
-    //論理値：
-    bool flag1 = true;
-    bool flag2 = false;
-
-
-    //演算　+,-,*,/,%,+=,++,--,&&,||,!
-
+    // if文
+    // >, >=, <, <=, ==, !=
     void Start()
     {
-        int a = 10;
-        int b = 2;
-        Debug.Log(a + b);
-        Debug.Log(a - b);
-        Debug.Log(a * b);
-        Debug.Log(a / b);
-        Debug.Log(b / a);
+        int hp = 9;
 
-        float c = 10.0f;
-        float d = 2.0f;
-        Debug.Log(d / c);
+        if (hp > 150)
+        {
+            Debug.Log("攻撃だー！");
+        }
+        else if (hp > 80)
+        {
+            Debug.Log("そろそろHPやばいよ！");
+        }
+        else
+        {
+            Debug.Log("回復して！！");
+        }
 
-        int n = 10;
-        int m = 3;
-        Debug.Log(n / m);
-        Debug.Log(n % m);
-        Debug.Log(10 % 2);
-        Debug.Log(9 % 2);
+        //　偶数か奇数を求める
+        if (hp%2 == 0)
+        {
+            Debug.Log("HPは偶数");
+        }
+        else if (hp%2 == 1)
+        {
+            Debug.Log("HPは奇数");
+        }
 
-        int x = 10;
-        x += 1;     // x = x + 1
-        x++;        // x = x + 1
-
-
-
-
+        //　演習
+        if (hp%3 == 1)
+        {
+            Debug.Log("余りは１");
+        }
+        else if (hp%3 == 2)
+        {
+            Debug.Log("余りは２");
+        }
+        else if (hp%3 == 0)
+        {
+            Debug.Log("余りは０");
+        }
+        else
+        {
+            Debug.Log("その他");
+        }
     }
 
     void Update()
