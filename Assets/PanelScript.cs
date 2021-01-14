@@ -7,6 +7,10 @@ public class PanelScript : MonoBehaviour
     //当たった物の名前をコンソールに表示してくれる
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log(other.name);
+        }
+        
     }
 }
