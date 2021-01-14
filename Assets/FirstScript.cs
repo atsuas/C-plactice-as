@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello world");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PlayerModel player = new PlayerModel("koko");
+        Debug.Log(player.Name);
+        player.Name = "xxxx";
+        Debug.Log(player.Name);
+        //Debug.Log(player.hp);
+        //Debug.Log(player.at);
     }
 }
