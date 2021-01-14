@@ -6,6 +6,13 @@ public class PlayerModel
     int hp;
     int at;
 
+    //プロパティ
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
     //生成されたときに呼び出される
     public PlayerModel()
     {
@@ -15,6 +22,8 @@ public class PlayerModel
     public PlayerModel(string name)
     {
         this.name = name;
+        hp = 100;
+        at = 10;
     }
 
     public void SayName()
