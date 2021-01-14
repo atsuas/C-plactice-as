@@ -14,6 +14,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //transform.position += new Vector3(0.1f, 0, 0);  動かし方①
         //rigidbody.velocity = new Vector3(1f, 0, 0);   動かし方②
-        rigidbody.AddForce(new Vector3(0, 10, 0));
+        rigidbody.AddForce(new Vector3(0, 10, 0));  //動かし方③
     }
 }
